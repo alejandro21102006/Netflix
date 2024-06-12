@@ -73,6 +73,7 @@ public class netflix {
             this.planesdenetflix();
             this.Pago();
             this.manejaaperfil();
+            this.iniciarSesion();
             this.catalogoDePelicula();
         }
         else {
@@ -129,7 +130,7 @@ public class netflix {
         System.out.println("Ya puede disfrutar del amplio catalogo de Netflix");
         return null;
     }
-    public void manejaaperfil () {
+    public String manejaaperfil () {
         Scanner gab = new Scanner(System.in);
         String fnombre_in;
         String contraseña,fnombre= "";
@@ -187,15 +188,17 @@ public class netflix {
                 System.out.println("Opción inválida.");
                 break;
         }
+        return null;
     }
 
-    public void iniciarSesion() {
+    public String iniciarSesion() {
         Scanner entrada = new Scanner(System.in);
         System.out.println("--- Iniciar Sesión ---");
         System.out.println("Ingrese su nombre de perfil:");
         String nombrePerfil = entrada.nextLine();
         System.out.println("Ingrese su contraseña:");
         String contraseña = entrada.nextLine();
+        return null;
     }
 
 
