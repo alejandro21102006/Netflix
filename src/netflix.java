@@ -1,5 +1,3 @@
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 public class netflix {
     private String nombre,nombreUsuario;
