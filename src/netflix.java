@@ -11,7 +11,7 @@ public class netflix {
         System.out.println("NETFLIX ");
         System.out.println("-----ELIJA UNA OPCIÓN-----");
         System.out.println("1. Registrarse");
-        System.out.println("2. Iniciar sesión-");
+        System.out.println("2. Iniciar sesión");
         System.out.print("Selecciona una opción: ");
         int opcion = datos.nextInt();
         datos.nextLine();
@@ -64,8 +64,7 @@ public class netflix {
         if (opcion < 3){
             this.planesdenetflix();
             this.Pago();
-            this.manejarPerfiles();
-            this.iniciarSesion();
+            this.manejaaperfil();
             this.catalogoDePelicula();
         }
         else {
@@ -122,8 +121,7 @@ public class netflix {
         System.out.println("Ya puede disfrutar del amplio catalogo de Netflix");
         return null;
     }
-
-    public String manejarPerfiles() {
+    public void manejaaperfil () {
         Scanner gab = new Scanner(System.in);
         String fnombre_in;
         String contraseña,fnombre= "";
@@ -147,6 +145,26 @@ public class netflix {
                     System.out.println("Ingrese su contraseña:");
                     contraseña = gab.nextLine();
                 }
+                System.out.println("Seleccione el tipo de cuenta:");
+                System.out.println("1. Principal");
+                System.out.println("2. Normal");
+                System.out.println("3. Infantil");
+                System.out.print("Seleccione una opción: ");
+                int tipoCuenta = gab.nextInt();
+                switch (tipoCuenta) {
+                    case 1:
+                        System.out.println("Ha seleccionado la cuenta principal.");
+                        break;
+                    case 2:
+                        System.out.println("Ha seleccionado la cuenta normal.");
+                        break;
+                    case 3:
+                        System.out.println("Ha seleccionado la cuenta infantil.");
+                        break;
+                    default:
+                        System.out.println("Opción inválida. Se asignará la cuenta normal por defecto.");
+                        break;
+                }
                 System.out.println("Perfil creado con éxito.");
                 iniciarSesion();
                 break;
@@ -161,18 +179,17 @@ public class netflix {
                 System.out.println("Opción inválida.");
                 break;
         }
-        return null;
     }
 
-    public String iniciarSesion() {
+    public void iniciarSesion() {
         Scanner entrada = new Scanner(System.in);
         System.out.println("--- Iniciar Sesión ---");
         System.out.println("Ingrese su nombre de perfil:");
         String nombrePerfil = entrada.nextLine();
         System.out.println("Ingrese su contraseña:");
         String contraseña = entrada.nextLine();
-        return null;
     }
+
 
     public String catalogoDePelicula() {
         Scanner sc = new Scanner(System.in);
@@ -350,7 +367,7 @@ public class netflix {
                         System.out.println(" Protagonizada por Russell Crowe, esta película sigue " +
                                 "a un general romano que es traicionado por el hijo del emperador y " +
                                 "se convierte en un gladiador en busca de venganza.");
-                        System.out.println("__GRACIAS__");
+                        System.out.println("_GRACIAS_");
                         break;
                     default:
                         System.out.println("recuerda escoger uno");
