@@ -11,7 +11,7 @@ public class netflix {
         System.out.println("NETFLIX ");
         System.out.println("-----ELIJA UNA OPCIÓN-----");
         System.out.println("1. Registrarse");
-        System.out.println("2. Iniciar sesión_");
+        System.out.println("2. Iniciar sesión");
         System.out.print("Selecciona una opción: ");
         int opcion = datos.nextInt();
         datos.nextLine();
@@ -64,7 +64,6 @@ public class netflix {
         if (opcion < 3){
             this.planesdenetflix();
             this.Pago();
-            this.manejarPerfiles();
             this.catalogoDePelicula();
         }
         else {
@@ -101,7 +100,7 @@ public class netflix {
         System.out.println("El total a pagar es: $" + precio);
         return precio;
     }
-    
+
     public String Pago() {
         Scanner xd= new Scanner(System.in);
         System.out.println("El metodo de pago es por tarjeta de debito o credito");
@@ -122,108 +121,57 @@ public class netflix {
         return null;
     }
 
-
-    public String manejarPerfiles() {
+    public void manejarPerfiles() {
         Scanner gab = new Scanner(System.in);
-        Map<Integer, String> perfiles = new HashMap<>();
-        System Map,HashMap;
-        int perfilID = 1;
-        int opcion;
-        do {
-            System.out.println("Seleccione una opción:");
-            System.out.println("1. Seleccionar perfil existente");
-            System.out.println("2. Crear nuevo perfil");
-            System.out.println("3. Eliminar perfil");
-            System.out.println("4. Ver todos los perfiles");
-            System.out.println("5. Salir");
-            opcion = gab.nextInt();
-            gab.nextLine();
-            switch (opcion) {
-                case 1:
-                    if (perfiles.isEmpty()) {
-                        System.out.println("No hay perfiles disponibles.");
-                        break;
-                    }
-                    System.out.println("Seleccione el ID del perfil:");
-                    for (Map.Entry<Integer, String> perfil : perfiles.entrySet()) {
-                        System.out.println(perfil.getKey() + ". " + perfil.getValue());
-                    }
-                    int idSeleccionado=gab.nextInt();
-                    gab.nextLine();
-                    if (perfiles.containsKey(idSeleccionado)) {
-                        System.out.println("Ha seleccionado el perfil: " + perfiles.get(idSeleccionado));
-                    } else {
-                        System.out.println("ID de perfil no válido.");
-                    }
-                    break;
-                case 2:
-                    System.out.println("Ingrese el nombre del nuevo perfil:");
-                    String nombrePerfil=gab.nextLine();
-                    System.out.println("Seleccione el tipo de perfil:");
-                    System.out.println("1. Perfil Principal");
-                    System.out.println("2. Perfil Normal");
-                    System.out.println("3. Perfil Infantil");
-                    int tipoPerfil=gab.nextInt();
-                    gab.nextLine();
-                    String tipoperfiltexto;
-                    switch (tipoPerfil) {
-                        case 1:
-                            tipoperfiltexto = "Principal";
-                            break;
-                        case 2:
-                            tipoperfiltexto = "Normal";
-                            break;
-                        case 3:
-                            tipoperfiltexto = "Infantil";
-                            break;
-                        default:
-                            tipoperfiltexto = "Normal";
-                            System.out.println("Tipo de perfil no válido, se asignará 'Normal'.");
-                    }
-                    perfiles.put(perfilID, nombrePerfil + " (" + tipoperfiltexto + ")");
-                    System.out.println("Perfil creado con ID: " + perfilID + " y tipo: " + tipoperfiltexto);
-                    perfilID++;
-                    break;
-                case 3:
-                    if (perfiles.isEmpty()) {
-                        System.out.println("No hay perfiles para eliminar.");
-                        break;
-                    }
-                    System.out.println("Ingrese el ID del perfil a eliminar:");
-                    for (Map.Entry<Integer, String> perfil : perfiles.entrySet()) {
-                        System.out.println(perfil.getKey() + ". " + perfil.getValue());
-                    }
-                    int idEliminar = gab.nextInt();
-                    gab.nextLine();
-                    if (perfiles.containsKey(idEliminar)) {
-                        System.out.println("Perfil " + perfiles.get(idEliminar) + " eliminado.");
-                        perfiles.remove(idEliminar);
-                    } else {
-                        System.out.println("ID de perfil no válido.");
-                    }
-                    break;
-                case 4:
-                    if (perfiles.isEmpty()) {
-                        System.out.println("No hay perfiles disponibles.");
-                    } else {
-                        System.out.println("Perfiles disponibles:");
-                        for (Map.Entry<Integer, String> perfil : perfiles.entrySet()) {
-                            System.out.println(perfil.getKey() + ". " + perfil.getValue());
-                        }
-                    }
-                    break;
-                case 5:
-                    System.out.println("Saliendo de Netflix.");
-                    break;
-                default:
-                    System.out.println("Opción no válida. Por favor, seleccione una opción correcta.");
-                    break;
-            }
-        } while (opcion != 5);
-        return null;
+        String fnombre_in;
+        String contraseña,fnombre= "";
+        System.out.println("NETFLIX");
+        System.out.println("-----ELIJA UNA OPCIÓN-----");
+        System.out.println("1. Crear perfil");
+        System.out.println("2. Seleccionar perfil");
+        System.out.print("Seleccione una opción: ");
+        int opcion = gab.nextInt();
+        gab.nextLine();
+        switch (opcion) {
+            case 1:
+                System.out.println("-------Cree su perfil------");
+                System.out.println("Ingrese el nombre del perfil:");
+                fnombre =gab.nextLine();
+                System.out.print("¿Desea crear una contraseña? " +
+                        "(SI):" +
+                        "(NO) ");
+                String opcionContraseña = gab.nextLine();
+                if (opcionContraseña.equalsIgnoreCase("SI")) {
+                    System.out.println("Ingrese su contraseña:");
+                    contraseña = gab.nextLine();
+                }
+                System.out.println("Perfil creado con éxito.");
+                iniciarSesion();
+                break;
+            case 2:
+                System.out.println("Iniciar Sesión");
+                System.out.println("Ingrese su nombre de perfil:");
+                fnombre_in = gab.nextLine();
+                System.out.println("Ingrese su contraseña:");
+                String contraseña_in = gab.nextLine();
+                break;
+            default:
+                System.out.println("Opción inválida.");
+                break;
+        }
     }
 
-    public String catalogoDePelicula() {
+    public void iniciarSesion() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("--- Iniciar Sesión ---");
+        System.out.println("Ingrese su nombre de perfil:");
+        String nombrePerfil = entrada.nextLine();
+        System.out.println("Ingrese su contraseña:");
+        String contraseña = entrada.nextLine();
+    }
+
+
+        public String catalogoDePelicula() {
         Scanner sc = new Scanner(System.in);
         System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
                 "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
