@@ -67,7 +67,7 @@ public class netflix {
             this.fprueva();
         }
         else {
-            System.out.println("inteta de buevo:");
+            System.out.println("intenta de buevo:");
         }
         return opcion;
     }
