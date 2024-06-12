@@ -28,7 +28,7 @@ public class netflix {
                         "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
                         "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
                         "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
-                System.out.println("_REGISTRARSE_");
+                System.out.println("REGISTRARSE");
                 System.out.println("INGRESE SU NOMBRE");
                 nombre = datos.nextLine();
                 System.out.println("INGRESE APELLIDOS");
@@ -58,7 +58,7 @@ public class netflix {
                     System.out.println("--LA CONTRASEÑA ES CORRECTA--");
                     System.out.println("--LAS VESES QUE FALLO ES--:"+contador);
                     System.out.println("");
-                    System.out.println("_BIENVENIDO_(●'◡'●)(●'◡'●)");
+                    System.out.println("BIENVENIDO(●'◡'●)(●'◡'●)");
                     System.out.println("");
 
                 }
@@ -76,7 +76,7 @@ public class netflix {
                 System.out.println("Ingrese su contraseña:");
                 contraseña_in = datos.nextLine();
                 System.out.println("");
-                System.out.println("_BIENVENIDO_(●'◡'●)(●'◡'●)");
+                System.out.println("BIENVENIDO(●'◡'●)(●'◡'●)");
                 System.out.println("");
                 break;
             default:
@@ -181,20 +181,33 @@ public class netflix {
                         "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
                         "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
                         "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
-                System.out.println("Seleccione el tipo de cuenta:");
-                System.out.println("1. PRINCIPAL" +
-                        "  Este es el perfil principal de la cuenta de Netflix, utilizado por el propietario principal" +
-                        "  o la persona que maneja la suscripción. Tiene acceso completo a todas las funciones de la " +
-                        "  cuenta, incluyendo la capacidad de crear y administrar perfiles adicionales, configurar preferencias" +
-                        "  de contenido, administrar el historial de visualización y establecer controles parentales");
-                System.out.println("2. Normal" +
-                        "  Este es un perfil individual en la cuenta de Netflix, utilizado por uno de los usuarios registrados" +
-                        "  en la suscripción. Este perfil tiene acceso completo al catálogo de contenido de Netflix y puede ver, buscar" +
-                        "  y calificar películas y programas de televisión. Aunque no tiene acceso a las funciones de administración de la cuenta");
-                System.out.println("3. Infantil" +
-                        "   Este perfil está diseñado específicamente para niños y está configurado con contenido apropiado para su edad" +
-                        "   en Netflix. Este perfil tiene acceso a una amplia selección de películas y programas de televisión para niños," +
-                        "   que incluyen dibujos animados, series animadas, películas familiares y programas educativos.");
+                System.out.println("+-----------------------------------------------------------------------------+\n" +
+                        "|                       Seleccione el tipo de cuenta:                         |\n" +
+                        "|-----------------------------------------------------------------------------|\n" +
+                        "| 1. PRINCIPAL                                                                 |\n" +
+                        "|    Este es el perfil principal de la cuenta de Netflix, utilizado por el    |\n" +
+                        "|    propietario principal o la persona que maneja la suscripción. Tiene      |\n" +
+                        "|    acceso completo a todas las funciones de la cuenta, incluyendo la        |\n" +
+                        "|    capacidad de crear y administrar perfiles adicionales, configurar        |\n" +
+                        "|    preferencias de contenido, administrar el historial de visualización     |\n" +
+                        "|    y establecer controles parentales.                                       |\n" +
+                        "|-----------------------------------------------------------------------------|\n" +
+                        "| 2. Normal                                                                   |\n" +
+                        "|    Este es un perfil individual en la cuenta de Netflix, utilizado por uno  |\n" +
+                        "|    de los usuarios registrados en la suscripción. Este perfil tiene acceso  |\n" +
+                        "|    completo al catálogo de contenido de Netflix y puede ver, buscar y       |\n" +
+                        "|    calificar películas y programas de televisión. Aunque no tiene acceso a  |\n" +
+                        "|    las funciones de administración de la cuenta.                            |\n" +
+                        "|-----------------------------------------------------------------------------|\n" +
+                        "| 3. Infantil                                                                 |\n" +
+                        "|    Este perfil está diseñado específicamente para niños y está configurado  |\n" +
+                        "|    con contenido apropiado para su edad en Netflix. Este perfil tiene       |\n" +
+                        "|    acceso a una amplia selección de películas y programas de televisión     |\n" +
+                        "|    para niños, que incluyen dibujos animados, series animadas, películas    |\n" +
+                        "|    familiares y programas educativos.                                       |\n" +
+                        "|                                                                             |\n" +
+                        "| Seleccione una opción:                                                      |\n" +
+                        "+-----------------------------------------------------------------------------+\n");
                 System.out.print("Seleccione una opción: ");
                 int tipoCuenta = gab.nextInt();
                 switch (tipoCuenta) {
