@@ -13,7 +13,7 @@ public class netflix {
         System.out.println("NETFLIX ");
         System.out.println("-----ELIJA UNA OPCIÓN-----");
         System.out.println("1. Registrarse");
-        System.out.println("2. Iniciar sesión");
+        System.out.println("2. Iniciar sesión_");
         System.out.print("Selecciona una opción: ");
         int opcion = datos.nextInt();
         datos.nextLine();
