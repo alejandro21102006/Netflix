@@ -48,7 +48,9 @@ public class netflix {
                     }
                     System.out.println("--LA CONTRASEÑA ES CORRECTA--");
                     System.out.println("--LAS VESES QUE FALLO ES--:"+contador);
+                    System.out.println("__");
                     System.out.println("__BIENVENIDO__(●'◡'●)(●'◡'●)");
+                    System.out.println("__");
             
                 }
 
@@ -59,7 +61,9 @@ public class netflix {
                 correo_in= datos.nextLine();
                 System.out.println("Ingrese su contraseña:");
                 contraseña_in = datos.nextLine();
+                System.out.println("__");
                 System.out.println("__BIENVENIDO__(●'◡'●)(●'◡'●)");
+                System.out.println("__");
                 break;
             default:
                 System.out.println("Opción inválida.");
