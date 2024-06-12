@@ -64,6 +64,7 @@ public class netflix {
 
         }
         if (opcion < 3){
+            this.planesdenetflix();
             this.Pago();
             this.manejarPerfiles();
             this.catalogoDePelicula();
@@ -73,6 +74,36 @@ public class netflix {
         }
         return opcion;
     }
+
+    public double planesdenetflix(){
+        Scanner plqn = new Scanner(System.in);
+        System.out.println("¿Qué plan desea comprar?");
+        System.out.println("1. Plan Básico");
+        System.out.println("2. Plan Estándar");
+        System.out.println("3. Plan Premium");
+        int opcion = plqn.nextInt();
+        plqn.nextLine();
+        double precio;
+        switch (opcion) {
+            case 1:
+                precio = 24.90;
+                break;
+            case 2:
+                precio = 34.90;
+                break;
+            case 3:
+                precio = 44.90;
+                break;
+            default:
+                System.out.println("Opción no válida. Seleccionando Plan Básico por defecto.");
+                precio = 24.90;
+                break;
+        }
+
+        System.out.println("El total a pagar es: $" + precio);
+        return precio;
+    }
+    
     public String Pago() {
         Scanner xd= new Scanner(System.in);
         System.out.println("El metodo de pago es por tarjeta de debito o credito");
