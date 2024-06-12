@@ -47,11 +47,7 @@ public class netflix {
 
                 break;
             case 2:
-                System.out.println("Iniciar Sesión");
-                System.out.println("INGRESE SU NOMBRE");
-                nombre = datos.nextLine();
-                System.out.println("Ingrese su nombre de usuario:");
-                nombreUsuario = datos.nextLine();
+                System.out.println("--Iniciar Sesión--");
                 System.out.println("Ingrese su correo electrónico:");
                 correo_in= datos.nextLine();
                 System.out.println("Ingrese su contraseña:");
