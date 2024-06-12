@@ -8,7 +8,13 @@ public class netflix {
         String apellidos,correo,correo_in,contraseña,contraseña_in;
         int contador=0;
 
-        System.out.println("NETFLIX ");
+        System.out.println("                          " +
+                "⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
+                "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
+                "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
+                "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
+                "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
+        System.out.println("------NETFLIX-----");
         System.out.println("----ELIJA UNA OPCIÓN----");
         System.out.println("1. Registrarse");
         System.out.println("2. Iniciar sesión");
