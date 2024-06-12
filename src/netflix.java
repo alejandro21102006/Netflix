@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class netflix {
-    private String nombre,nombreUsuario;
+    private String pnombre,pcontraseña,pnombre_in,nombre,nombreUsuario;
     private int opcion;
 
     public int fDatosClientea() {
@@ -23,7 +23,12 @@ public class netflix {
         datos.nextLine();
         switch (opcion) {
             case 1:
-                System.out.println("__REGISTRARSE__");
+                System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
+                        "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
+                        "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
+                        "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
+                        "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
+                System.out.println("_REGISTRARSE_");
                 System.out.println("INGRESE SU NOMBRE");
                 nombre = datos.nextLine();
                 System.out.println("INGRESE APELLIDOS");
@@ -34,7 +39,11 @@ public class netflix {
                 correo = datos.nextLine();
                 System.out.println("Ingrese su contraseña:");
                 contraseña = datos.nextLine();
-
+                System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
+                        "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
+                        "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
+                        "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
+                        "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
                 System.out.println("--INICIAR SESIÓN--");
                 System.out.println("Ingrese su correo electrónico:");
                 correo_in= datos.nextLine();
@@ -48,22 +57,27 @@ public class netflix {
                     }
                     System.out.println("--LA CONTRASEÑA ES CORRECTA--");
                     System.out.println("--LAS VESES QUE FALLO ES--:"+contador);
-                    System.out.println("__");
-                    System.out.println("__BIENVENIDO__(●'◡'●)(●'◡'●)");
-                    System.out.println("__");
-            
+                    System.out.println("");
+                    System.out.println("_BIENVENIDO_(●'◡'●)(●'◡'●)");
+                    System.out.println("");
+
                 }
 
                 break;
             case 2:
+                System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
+                        "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
+                        "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
+                        "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
+                        "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
                 System.out.println("--Iniciar Sesión--");
                 System.out.println("Ingrese su correo electrónico:");
                 correo_in= datos.nextLine();
                 System.out.println("Ingrese su contraseña:");
                 contraseña_in = datos.nextLine();
-                System.out.println("__");
-                System.out.println("__BIENVENIDO__(●'◡'●)(●'◡'●)");
-                System.out.println("__");
+                System.out.println("");
+                System.out.println("_BIENVENIDO_(●'◡'●)(●'◡'●)");
+                System.out.println("");
                 break;
             default:
                 System.out.println("Opción inválida.");
@@ -72,7 +86,7 @@ public class netflix {
         if (opcion < 3){
             this.planesdenetflix();
             this.Pago();
-            this.manejaaperfil();
+            this.mperfiles();
             this.iniciarSesion();
             this.catalogoDePelicula();
         }
@@ -84,6 +98,11 @@ public class netflix {
 
     public double planesdenetflix(){
         Scanner plqn = new Scanner(System.in);
+        System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
+                "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
+                "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
+                "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
+                "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
         System.out.println("¿Qué plan desea comprar?");
         System.out.println("1. Plan Básico");
         System.out.println("2. Plan Estándar");
@@ -130,11 +149,14 @@ public class netflix {
         System.out.println("Ya puede disfrutar del amplio catalogo de Netflix");
         return null;
     }
-    public String manejaaperfil () {
+    public String mperfiles() {
         Scanner gab = new Scanner(System.in);
-        String fnombre_in;
-        String contraseña,fnombre= "";
-        System.out.println("NETFLIX");
+        String contraseña = "";
+        System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
+                "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
+                "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
+                "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
+                "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
         System.out.println("-----ELIJA UNA OPCIÓN-----");
         System.out.println("1. Crear perfil");
         System.out.println("2. Seleccionar perfil");
@@ -145,19 +167,34 @@ public class netflix {
             case 1:
                 System.out.println("-------Cree su perfil------");
                 System.out.println("Ingrese el nombre del perfil:");
-                fnombre =gab.nextLine();
+                pnombre =gab.nextLine();
                 System.out.print("¿Desea crear una contraseña? " +
                         "(SI):" +
                         "(NO) ");
                 String opcionContraseña = gab.nextLine();
                 if (opcionContraseña.equalsIgnoreCase("SI")) {
                     System.out.println("Ingrese su contraseña:");
-                    contraseña = gab.nextLine();
+                    pcontraseña = gab.nextLine();
                 }
+                System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
+                        "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
+                        "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
+                        "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
+                        "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
                 System.out.println("Seleccione el tipo de cuenta:");
-                System.out.println("1. Principal");
-                System.out.println("2. Normal");
-                System.out.println("3. Infantil");
+                System.out.println("1. PRINCIPAL" +
+                        "  Este es el perfil principal de la cuenta de Netflix, utilizado por el propietario principal" +
+                        "  o la persona que maneja la suscripción. Tiene acceso completo a todas las funciones de la " +
+                        "  cuenta, incluyendo la capacidad de crear y administrar perfiles adicionales, configurar preferencias" +
+                        "  de contenido, administrar el historial de visualización y establecer controles parentales");
+                System.out.println("2. Normal" +
+                        "  Este es un perfil individual en la cuenta de Netflix, utilizado por uno de los usuarios registrados" +
+                        "  en la suscripción. Este perfil tiene acceso completo al catálogo de contenido de Netflix y puede ver, buscar" +
+                        "  y calificar películas y programas de televisión. Aunque no tiene acceso a las funciones de administración de la cuenta");
+                System.out.println("3. Infantil" +
+                        "   Este perfil está diseñado específicamente para niños y está configurado con contenido apropiado para su edad" +
+                        "   en Netflix. Este perfil tiene acceso a una amplia selección de películas y programas de televisión para niños," +
+                        "   que incluyen dibujos animados, series animadas, películas familiares y programas educativos.");
                 System.out.print("Seleccione una opción: ");
                 int tipoCuenta = gab.nextInt();
                 switch (tipoCuenta) {
@@ -178,9 +215,14 @@ public class netflix {
                 iniciarSesion();
                 break;
             case 2:
+                System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
+                        "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
+                        "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
+                        "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
+                        "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
                 System.out.println("Iniciar Sesión");
                 System.out.println("Ingrese su nombre de perfil:");
-                fnombre_in = gab.nextLine();
+                pnombre_in = gab.nextLine();
                 System.out.println("Ingrese su contraseña:");
                 String contraseña_in = gab.nextLine();
                 break;
@@ -193,6 +235,11 @@ public class netflix {
 
     public String iniciarSesion() {
         Scanner entrada = new Scanner(System.in);
+        System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\\n\" +\n" +
+                "                \"⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\\n\" +\n" +
+                "                \"⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\\n\" +\n" +
+                "                \"⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\\n\" +\n" +
+                "                \"⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
         System.out.println("--- Iniciar Sesión ---");
         System.out.println("Ingrese su nombre de perfil:");
         String nombrePerfil = entrada.nextLine();
@@ -221,6 +268,11 @@ public class netflix {
 
         switch (opcionCategoria) {
             case 1:
+                System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
+                        "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
+                        "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
+                        "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
+                        "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
                 System.out.println("Ha elegido una película de anime:");
                 System.out.println("1 One Piece");
                 System.out.println("2 Shingeki no Kyojin");
@@ -378,7 +430,7 @@ public class netflix {
                         System.out.println(" Protagonizada por Russell Crowe, esta película   sigue " +
                                 "a un general romano que es traicionado por el hijo del emperador y " +
                                 "se convierte en un gladiador en busca de venganza.");
-                        System.out.println("_GRACIAS_");
+                        System.out.println("GRACIAS");
                         break;
                     default:
                         System.out.println("recuerda escoger uno");
