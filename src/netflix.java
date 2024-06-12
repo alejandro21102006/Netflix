@@ -40,9 +40,10 @@ public class netflix {
                         System.out.println("intenta de nuevo");
                         contraseña_in=datos.nextLine();
                     }
-                    System.out.println("la contraseña es corecta");
-
-                    System.out.println("las veses que fallo es:"+contador);
+                    System.out.println("--LA CONTRASEÑA ES CORRECTA--");
+                    System.out.println("--LAS VESES QUE FALLO ES--:"+contador);
+                    System.out.println("__BIENVENIDO__:"+nombre+"(●'◡'●)(●'◡'●)");
+            
                 }
 
                 break;
