@@ -17,19 +17,19 @@ public class netflix {
         datos.nextLine();
         switch (opcion) {
             case 1:
-                System.out.println("Registrarse");
+                System.out.println("__REGISTRARSE__");
                 System.out.println("INGRESE SU NOMBRE");
                 nombre = datos.nextLine();
                 System.out.println("INGRESE APELLIDOS");
                 apellidos = datos.nextLine();
-                System.out.println("Ingrese su nombre de usuario:");
+                System.out.println("--Ingrese su nombre de usuario--");
                 nombreUsuario = datos.nextLine();
                 System.out.println("Ingrese su correo electrónico:");
                 correo = datos.nextLine();
                 System.out.println("Ingrese su contraseña:");
                 contraseña = datos.nextLine();
 
-                System.out.println("Iniciar Sesión");
+                System.out.println("--INICIAR SESIÓN--");
                 System.out.println("Ingrese su correo electrónico:");
                 correo_in= datos.nextLine();
                 if (correo_in.equals(correo)){
