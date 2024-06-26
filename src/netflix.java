@@ -96,7 +96,6 @@ public class netflix {
             this.planesdenetflix();
             this.Pago();
             this.mperfiles();
-            this.iniciarSesion();
             this.catalogoDePelicula();
         }
         else {
@@ -283,21 +282,6 @@ public class netflix {
                     break;
             }
         }
-    }
-
-    public String iniciarSesion() {
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\\n\" +\n" +
-                "                \"⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\\n\" +\n" +
-                "                \"⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\\n\" +\n" +
-                "                \"⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\\n\" +\n" +
-                "                \"⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
-        System.out.println("--- Iniciar Sesión ---");
-        System.out.println("Ingrese su nombre de perfil:");
-        String nombrePerfil = entrada.nextLine();
-        System.out.println("Ingrese su contraseña:");
-        String contraseña = entrada.nextLine();
-        return null;
     }
 
 
