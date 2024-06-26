@@ -3,6 +3,11 @@ public class netflix {
     private String pnombre,pcontraseña,pnombre_in,nombre,nombreUsuario;
     private int opcion;
 
+    private String[] nombresPerfiles = new String[10];
+    private String[] contraseñasPerfiles = new String[10];
+    private int[] tiposCuentas = new int[10];
+    private int contadorPerfiles = 0;
+
     public int fDatosClientea() {
         Scanner datos = new Scanner(System.in);
         String apellidos,correo,correo_in,contraseña,contraseña_in;
@@ -14,7 +19,7 @@ public class netflix {
                 "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
                 "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
                 "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
-        System.out.println("------NETFLIX-------");
+        System.out.println("------NETFLIX--------");
         System.out.println("----ELIJA UNA OPCIÓN----");
         System.out.println("1. Registrarse");
         System.out.println("2. Iniciar sesión");
@@ -159,101 +164,125 @@ public class netflix {
         System.out.println("Ya puede disfrutar del amplio catalogo de Netflix");
         return null;
     }
-    public String mperfiles() {
+
+    public void mperfiles() {
         Scanner gab = new Scanner(System.in);
-        String contraseña = "";
-        System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
-                "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
-                "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
-                "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
-                "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
-        System.out.println("-----ELIJA UNA OPCIÓN-----");
-        System.out.println("1. Crear perfil");
-        System.out.println("2. Seleccionar perfil");
-        System.out.print("Seleccione una opción: ");
-        int opcion = gab.nextInt();
-        gab.nextLine();
-        switch (opcion) {
-            case 1:
-                System.out.println("-------Cree su perfil------");
-                System.out.println("Ingrese el nombre del perfil:");
-                pnombre =gab.nextLine();
-                System.out.print("¿Desea crear una contraseña? " +
-                        "(SI):" +
-                        "(NO) ");
-                String opcionContraseña = gab.nextLine();
-                if (opcionContraseña.equalsIgnoreCase("SI")) {
-                    System.out.println("Ingrese su contraseña:");
-                    pcontraseña = gab.nextLine();
-                }
-                System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
-                        "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
-                        "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
-                        "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
-                        "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
-                System.out.println("+-----------------------------------------------------------------------------+\n" +
-                        "|                       Seleccione el tipo de cuenta:                         |\n" +
-                        "|-----------------------------------------------------------------------------|\n" +
-                        "| 1. PRINCIPAL                                                                 |\n" +
-                        "|    Este es el perfil principal de la cuenta de Netflix, utilizado por el    |\n" +
-                        "|    propietario principal o la persona que maneja la suscripción. Tiene      |\n" +
-                        "|    acceso completo a todas las funciones de la cuenta, incluyendo la        |\n" +
-                        "|    capacidad de crear y administrar perfiles adicionales, configurar        |\n" +
-                        "|    preferencias de contenido, administrar el historial de visualización     |\n" +
-                        "|    y establecer controles parentales.                                       |\n" +
-                        "|-----------------------------------------------------------------------------|\n" +
-                        "| 2. Normal                                                                   |\n" +
-                        "|    Este es un perfil individual en la cuenta de Netflix, utilizado por uno  |\n" +
-                        "|    de los usuarios registrados en la suscripción. Este perfil tiene acceso  |\n" +
-                        "|    completo al catálogo de contenido de Netflix y puede ver, buscar y       |\n" +
-                        "|    calificar películas y programas de televisión. Aunque no tiene acceso a  |\n" +
-                        "|    las funciones de administración de la cuenta.                            |\n" +
-                        "|-----------------------------------------------------------------------------|\n" +
-                        "| 3. Infantil                                                                 |\n" +
-                        "|    Este perfil está diseñado específicamente para niños y está configurado  |\n" +
-                        "|    con contenido apropiado para su edad en Netflix. Este perfil tiene       |\n" +
-                        "|    acceso a una amplia selección de películas y programas de televisión     |\n" +
-                        "|    para niños, que incluyen dibujos animados, series animadas, películas    |\n" +
-                        "|    familiares y programas educativos.                                       |\n" +
-                        "|                                                                             |\n" +
-                        "| Seleccione una opción:                                                      |\n" +
-                        "+-----------------------------------------------------------------------------+\n");
-                System.out.print("Seleccione una opción: ");
-                int tipoCuenta = gab.nextInt();
-                switch (tipoCuenta) {
-                    case 1:
-                        System.out.println("Ha seleccionado la cuenta principal.");
+
+        while (true) {
+            System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖");
+            System.out.println("⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁");
+            System.out.println("⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀");
+            System.out.println("⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆");
+            System.out.println("⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
+            System.out.println("-----ELIJA UNA OPCIÓN-----");
+            System.out.println("1. Crear perfil");
+            System.out.println("2. Seleccionar perfil");
+            System.out.println("3. Salir");
+            System.out.print("Seleccione una opción: ");
+            int opcion = gab.nextInt();
+            gab.nextLine();
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("-------Cree su perfil------");
+                    System.out.println("Ingrese el nombre del perfil:");
+                    String pnombre = gab.nextLine();
+                    nombresPerfiles[contadorPerfiles] = pnombre;
+
+                    System.out.print("¿Desea crear una contraseña? (SI / NO): ");
+                    String opcionContraseña = gab.nextLine();
+                    if (opcionContraseña.equalsIgnoreCase("SI")) {
+                        System.out.println("Ingrese su contraseña:");
+                        String pcontraseña = gab.nextLine();
+                        contraseñasPerfiles[contadorPerfiles] = pcontraseña;
+                    } else {
+                        contraseñasPerfiles[contadorPerfiles] = "";
+                    }
+
+                    System.out.println("+-----------------------------------------------------------------------------+\\n\" +\n" +
+                            "\"|                       Seleccione el tipo de cuenta:                         |\\n\" +\n" +
+                            "\"|-----------------------------------------------------------------------------|\\n\" +\n" +
+                            "\"| 1. PRINCIPAL                                                                 |\\n\" +\n" +
+                            "\"|    Este es el perfil principal de la cuenta de Netflix, utilizado por el    |\\n\" +\n" +
+                            "\"|    propietario principal o la persona que maneja la suscripción. Tiene      |\\n\" +\n" +
+                            "\"|    acceso completo a todas las funciones de la cuenta, incluyendo la        |\\n\" +\n" +
+                            "\"|    capacidad de crear y administrar perfiles adicionales, configurar        |\\n\" +\n" +
+                            "\"|    preferencias de contenido, administrar el historial de visualización     |\\n\" +\n" +
+                            "\"|    y establecer controles parentales.                                       |\\n\" +\n" +
+                            "\"|-----------------------------------------------------------------------------|\\n\" +\n" +
+                            "\"| 2. Normal                                                                   |\\n\" +\n" +
+                            "\"|    Este es un perfil individual en la cuenta de Netflix, utilizado por uno  |\\n\" +\n" +
+                            "\"|    de los usuarios registrados en la suscripción. Este perfil tiene acceso  |\\n\" +\n" +
+                            "\"|    completo al catálogo de contenido de Netflix y puede ver, buscar y       |\\n\" +\n" +
+                            "\"|    calificar películas y programas de televisión. Aunque no tiene acceso a  |\\n\" +\n" +
+                            "\"|    las funciones de administración de la cuenta.                            |\\n\" +\n" +
+                            "\"|-----------------------------------------------------------------------------|\\n\" +\n" +
+                            "\"| 3. Infantil                                                                 |\\n\" +\n" +
+                            "\"|    Este perfil está diseñado específicamente para niños y está configurado  |\\n\" +\n" +
+                            "\"|    con contenido apropiado para su edad en Netflix. Este perfil tiene       |\\n\" +\n" +
+                            "\"|    acceso a una amplia selección de películas y programas de televisión     |\\n\" +\n" +
+                            "\"|    para niños, que incluyen dibujos animados, series animadas, películas    |\\n\" +\n" +
+                            "\"|    familiares y programas educativos.                                       |\\n\" +\n" +
+                            "\"|                                                                             |\\n\" +\n" +
+                            "\"| Seleccione una opción:                                                      |\\n\" +\n" +
+                            "\"+----------------------------------------------------------------------------+");
+                    int tipoCuenta = gab.nextInt();
+                    tiposCuentas[contadorPerfiles] = tipoCuenta;
+                    contadorPerfiles++;
+                    System.out.println("Perfil creado con éxito.");
+                    break;
+                case 2:
+                    if (contadorPerfiles == 0) {
+                        System.out.println("No hay perfiles creados. Cree un perfil primero.");
                         break;
-                    case 2:
-                        System.out.println("Ha seleccionado la cuenta normal.");
-                        break;
-                    case 3:
-                        System.out.println("Ha seleccionado la cuenta infantil.");
-                        break;
-                    default:
-                        System.out.println("Opción inválida. Se asignará la cuenta normal por defecto.");
-                        break;
-                }
-                System.out.println("Perfil creado con éxito.");
-                iniciarSesion();
-                break;
-            case 2:
-                System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
-                        "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
-                        "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
-                        "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
-                        "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
-                System.out.println("Iniciar Sesión");
-                System.out.println("Ingrese su nombre de perfil:");
-                pnombre_in = gab.nextLine();
-                System.out.println("Ingrese su contraseña:");
-                String contraseña_in = gab.nextLine();
-                break;
-            default:
-                System.out.println("Opción inválida.");
-                break;
+                    }
+                    System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖");
+                    System.out.println("⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁");
+                    System.out.println("⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀");
+                    System.out.println("⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆");
+                    System.out.println("⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
+                    System.out.println("Iniciar Sesión");
+                    System.out.println("Perfiles disponibles:");
+                    for (int i = 0; i < contadorPerfiles; i++) {
+                        System.out.println((i + 1) + ". " + nombresPerfiles[i]);
+                    }
+                    System.out.println("Seleccione el número de perfil:");
+                    int numeroPerfil = gab.nextInt();
+                    gab.nextLine();
+                    if (numeroPerfil > 0 && numeroPerfil <= contadorPerfiles) {
+                        System.out.println("Ingrese su contraseña:");
+                        String contraseña_in = gab.nextLine();
+                        if (contraseña_in.equals(contraseñasPerfiles[numeroPerfil - 1])) {
+                            switch (tiposCuentas[numeroPerfil - 1]) {
+                                case 1:
+                                    System.out.println("Ha iniciado sesión en la cuenta principal.");
+                                    break;
+                                case 2:
+                                    System.out.println("Ha iniciado sesión en la cuenta normal.");
+                                    break;
+                                case 3:
+                                    System.out.println("Ha iniciado sesión en la cuenta infantil.");
+                                    break;
+                                default:
+                                    System.out.println("Ha iniciado sesión en la cuenta sin tipo definido.");
+                                    break;
+                            }
+                            return;
+                        } else {
+                            System.out.println("Nombre de perfil o contraseña incorrectos. Intente nuevamente.");
+                        }
+                    } else {
+                        System.out.println("Número de perfil incorrecto.");
+                    }
+                    break;
+                case 3:
+                    System.out.println("Saliendo del programa. ¡Hasta luego!");
+                    return;
+                default:
+                    System.out.println("Opción inválida. Por favor, seleccione una opción válida.");
+                    break;
+            }
         }
-        return null;
     }
 
     public String iniciarSesion() {
