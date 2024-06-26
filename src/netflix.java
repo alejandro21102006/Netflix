@@ -39,29 +39,33 @@ public class netflix {
                 correo = datos.nextLine();
                 System.out.println("Ingrese su contraseña:");
                 contraseña = datos.nextLine();
-                System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
-                        "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
-                        "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
-                        "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
-                        "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
-                System.out.println("--INICIAR SESIÓN--");
-                System.out.println("Ingrese su correo electrónico:");
-                correo_in= datos.nextLine();
-                if (correo_in.equals(correo)){
-                    System.out.println("Ingrese su contraseña:");
-                    contraseña_in = datos.nextLine();
-                    while (!contraseña.equals(contraseña_in)){
-                        contador++;
-                        System.out.println("intenta de nuevo");
-                        contraseña_in=datos.nextLine();
+
+                if (contraseña.length()==8){
+                    System.out.println("--INICIAR SESIÓN--");
+                    System.out.println("Ingrese su correo electrónico:");
+                    correo_in= datos.nextLine();
+                    if (correo_in.equals(correo)){
+                        System.out.println("Ingrese su contraseña:");
+                        contraseña_in = datos.nextLine();
+                        while (!contraseña.equals(contraseña_in)){
+                            contador++;
+                            System.out.println("intenta de nuevo");
+                            contraseña_in=datos.nextLine();
+                        }
+                        System.out.println("--LA CONTRASEÑA ES CORRECTA--");
+                        System.out.println("--LAS VESES QUE FALLO ES--:"+contador);
+                        System.out.println("");
+                        System.out.println("BIENVENIDO(●'◡'●)(●'◡'●)");
+                        System.out.println("");
+
                     }
-                    System.out.println("--LA CONTRASEÑA ES CORRECTA--");
-                    System.out.println("--LAS VESES QUE FALLO ES--:"+contador);
-                    System.out.println("");
-                    System.out.println("BIENVENIDO(●'◡'●)(●'◡'●)");
-                    System.out.println("");
+                }
+                else {
+                    System.out.println("La contraseña debe tener 8 dígitos. Inténtelo de nuevo.");
+                    this.fDatosClientea();
 
                 }
+
 
                 break;
             case 2:
