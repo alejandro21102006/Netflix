@@ -8,7 +8,7 @@ public class netflix {
         String apellidos,correo,correo_in,contraseña,contraseña_in;
         int contador=0;
 
-        System.out.println("_____                        " +
+        System.out.println("___                        " +
                 "⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
                 "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
                 "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
@@ -134,15 +134,21 @@ public class netflix {
         Scanner xd= new Scanner(System.in);
         System.out.println("El metodo de pago es por tarjeta de debito o credito");
         System.out.println("A continuacion ingrese los datos solicitados para completar el pago de su membresia");
-        int telefono,cvv,ntarjeta;
-        String correo1,fechadevencimiento;
-        System.out.println("Ingrese su número de tarjeta");
-        ntarjeta= xd.nextInt();
-        xd.nextLine();
-        System.out.println("Ingrese su fecha de caducidad");
-        fechadevencimiento= xd.nextLine();
-        System.out.println("Ingrese su CVV");
-        cvv= xd.nextInt();
+        String[] datosTarjeta = new String[4];
+        String[] nombresCamposrequeridos = {"número de tarjeta", "fecha de caducidad", "CVV", "nombre del titular"};
+        for (int i=0; i<datosTarjeta.length; i++){
+            System.out.println("Ingrese su "+ nombresCamposrequeridos[i]);
+            if (i==0){
+                do{
+                    datosTarjeta[i]=xd.nextLine();
+                    if(datosTarjeta[i].length() !=16){
+                        System.out.println("Por favor, ingrese un número de tarjeta válido de 16 dígitos.");
+                    }
+                } while (datosTarjeta[i].length()!=16);
+            }else{
+                datosTarjeta[i]= xd.nextLine();
+            }
+        }
         System.out.println("...procesando...");
         System.out.println("...procesando...");
         System.out.println("Su pago fue procesado correctamente!");
