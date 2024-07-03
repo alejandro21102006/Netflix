@@ -10,65 +10,81 @@ public class netflix {
 
     public int fDatosClientea() {
         Scanner datos = new Scanner(System.in);
-        String apellidos,correo,correo_in,contraseña,contraseña_in;
+        String apellidos,correo,contraseña,contraseña_in,correo_in;
         int contador=0;
 
-        System.out.println("___                        " +
+        System.out.println("                   " +
                 "⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
                 "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
                 "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
                 "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
                 "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
-        System.out.println("------NETFLIX-------");
+        System.out.println("------NETFLIX--------");
         System.out.println("----ELIJA UNA OPCIÓN----");
         System.out.println("1. Registrarse");
         System.out.println("2. Iniciar sesión");
+        System.out.println("3 - Guardar y salir");
         System.out.print("Selecciona una opción: ");
         int opcion = datos.nextInt();
         datos.nextLine();
         switch (opcion) {
             case 1:
-                System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
+                System.out.println("_" +
+                        "⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖\n" +
                         "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
                         "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
                         "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
                         "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
-                System.out.println("REGISTRARSE");
-                System.out.println("INGRESE SU NOMBRE");
-                nombre = datos.nextLine();
-                System.out.println("INGRESE APELLIDOS");
-                apellidos = datos.nextLine();
-                System.out.println("--Ingrese su nombre de usuario--");
-                nombreUsuario = datos.nextLine();
-                System.out.println("Ingrese su correo electrónico:");
-                correo = datos.nextLine();
-                System.out.println("Ingrese su contraseña:");
-                contraseña = datos.nextLine();
+                System.out.println("¿----DESEA REGISTRARSE---?(SI / NO)");
+                String registrase = datos.nextLine();
 
-                if (contraseña.length()==8){
-                    System.out.println("--INICIAR SESIÓN--");
+                if (registrase.equalsIgnoreCase("SI")){
+                    System.out.println("INGRESE SU NOMBRE");
+                    nombre = datos.nextLine();
+                    System.out.println("INGRESE APELLIDOS");
+                    apellidos = datos.nextLine();
+                    System.out.println("--Ingrese su nombre de usuario--");
+                    nombreUsuario = datos.nextLine();
                     System.out.println("Ingrese su correo electrónico:");
-                    correo_in= datos.nextLine();
-                    if (correo_in.equals(correo)){
-                        System.out.println("Ingrese su contraseña:");
-                        contraseña_in = datos.nextLine();
-                        while (!contraseña.equals(contraseña_in)){
-                            contador++;
-                            System.out.println("intenta de nuevo");
-                            contraseña_in=datos.nextLine();
+                    correo = datos.nextLine();
+                    System.out.println("Ingrese su contraseña:");
+                    contraseña = datos.nextLine();
+
+                    if (contraseña.length()>=8){
+                        System.out.println("--INICIAR SESIÓN--");
+                        System.out.println("Ingrese su correo electrónico:");
+                        correo_in= datos.nextLine();
+                        if (correo_in.equals(correo)){
+                            System.out.println("Ingrese su contraseña:");
+                            contraseña_in = datos.nextLine();
+                            while (!contraseña.equals(contraseña_in)){
+                                contador++;
+                                System.out.println("intenta de nuevo");
+                                contraseña_in=datos.nextLine();
+                            }
+                            System.out.println("--LA CONTRASEÑA ES CORRECTA--");
+                            System.out.println("--LAS VESES QUE FALLO ES--:"+contador);
+                            System.out.println("");
+                            System.out.println("BIENVENIDO(●'◡'●)(●'◡'●)");
+                            System.out.println("");
+
                         }
-                        System.out.println("--LA CONTRASEÑA ES CORRECTA--");
-                        System.out.println("--LAS VESES QUE FALLO ES--:"+contador);
-                        System.out.println("");
-                        System.out.println("BIENVENIDO(●'◡'●)(●'◡'●)");
-                        System.out.println("");
+                    } else if (registrase.equalsIgnoreCase("NO")) {
+                        System.out.println("gracias");
+
+
+                    } else {
+                        System.out.println("La contraseña debe tener 8 dígitos. Inténtelo de nuevo.");
+                        this.fDatosClientea();
 
                     }
                 }
-                else {
-                    System.out.println("La contraseña debe tener 8 dígitos. Inténtelo de nuevo.");
+                else if (registrase.equalsIgnoreCase("NO")) {
+                    System.out.println("GRACIAS");
                     this.fDatosClientea();
-
+                } else {
+                    System.out.println("la opción no existe, intenta de nuevo");
+                    this.fDatosClientea();
                 }
 
 
@@ -88,7 +104,11 @@ public class netflix {
                 System.out.println("BIENVENIDO(●'◡'●)(●'◡'●)");
                 System.out.println("");
                 break;
-            default:
+            case 3:
+
+                break;
+
+                default:
                 System.out.println("Opción inválida.");
 
         }
@@ -96,6 +116,7 @@ public class netflix {
             this.planesdenetflix();
             this.Pago();
             this.mperfiles();
+
             this.catalogoDePelicula();
         }
         else {
@@ -103,6 +124,7 @@ public class netflix {
         }
         return opcion;
     }
+
 
     public double planesdenetflix(){
         Scanner plqn = new Scanner(System.in);
@@ -283,6 +305,8 @@ public class netflix {
             }
         }
     }
+
+
 
 
     public String catalogoDePelicula() {
