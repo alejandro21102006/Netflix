@@ -17,7 +17,7 @@ public class netflix {
                 "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
                 "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n");
         System.out.println("------NETFLIX--------");
-        System.out.println("----ELIJA UNA OPCIÓN----");
+        System.out.println("----ELIJA UNA OPCIÓN---");
         System.out.println("1. Registrarse");
         System.out.println("2. Iniciar sesión");
         System.out.println("3. Guardar y salir");
