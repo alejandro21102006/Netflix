@@ -217,7 +217,6 @@ public class netflix {
 
     public void mperfiles() {
         Scanner gab = new Scanner(System.in);
-
         while (true) {
             System.out.println("⣶⡄⠀⣶⠀⢰⣶⣶⡆⠠⣶⣶⣶⡆⢰⣶⣶⣦⠀⣶⠀⠀⠀⣶⡆⠐⣶⠀⣰⡖");
             System.out.println("⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁");
@@ -227,7 +226,8 @@ public class netflix {
             System.out.println("-----ELIJA UNA OPCIÓN-----");
             System.out.println("1. Crear perfil");
             System.out.println("2. Seleccionar perfil");
-            System.out.println("3. Salir");
+            System.out.println("3. Cambiar contraseña de perfil");
+            System.out.println("4. Salir");
             System.out.print("Seleccione una opción: ");
             int opcion = gab.nextInt();
             gab.nextLine();
@@ -238,7 +238,6 @@ public class netflix {
                     System.out.println("Ingrese el nombre del perfil:");
                     String nombre = gab.nextLine();
                     nombresPerfiles[contadorPerfiles] = nombre;
-
                     System.out.print("¿Desea crear una contraseña? (SI / NO): ");
                     String opcionContraseña = gab.nextLine();
                     if (opcionContraseña.equalsIgnoreCase("SI")) {
@@ -326,6 +325,36 @@ public class netflix {
                     }
                     break;
                 case 3:
+                    if (contadorPerfiles == 0) {
+                        System.out.println("No hay perfiles creados. Cree un perfil primero.");
+                        return;
+                    }
+                    System.out.println("Cambiar contraseña de perfil:");
+                    System.out.println("Perfiles disponibles:");
+                    for (int i = 0; i < contadorPerfiles; i++) {
+                        System.out.println((i + 1) + ". " + nombresPerfiles[i]);
+                    }
+                    System.out.print("Seleccione el número de perfil para cambiar la contraseña: ");
+                    numeroPerfil = gab.nextInt();
+                    gab.nextLine();
+
+                    if (numeroPerfil > 0 && numeroPerfil <= contadorPerfiles) {
+                        System.out.print("Ingrese la contraseña actual del perfil:");
+                        String contraseñaActual = gab.nextLine();
+
+                        if (contraseñaActual.equals(contraseñasPerfiles[numeroPerfil - 1])) {
+                            System.out.print("Ingrese la nueva contraseña:");
+                            String nuevaContraseña = gab.nextLine();
+                            contraseñasPerfiles[numeroPerfil - 1] = nuevaContraseña;
+                            System.out.println("Contraseña cambiada exitosamente para el perfil: " + nombresPerfiles[numeroPerfil - 1]);
+                        } else {
+                            System.out.println("La contraseña actual no coincide. Intenta nuevamente.");
+                        }
+                    } else {
+                        System.out.println("Número de perfil incorrecto.");
+                    }
+                    break;
+                case 4:
                     System.out.println("Saliendo del programa. ¡Hasta luego!");
                     return;
                 default:
