@@ -120,7 +120,7 @@ public class netflix {
                 precio = this.planesdenetflix();
                 if (precio == -1) {
                     System.out.println("Volviendo al menú principal...");
-                    return this.fDatosClientea(); // Vuelve a mostrar el menú principal
+                    return this.fDatosClientea(); 
                 }
             } while (precio == -1);
 
@@ -166,7 +166,7 @@ public class netflix {
                 }
             } else if (opcion == 0) {
                 System.out.println("Volviendo al menú anterior...");
-                return -1; // Indicador para volver atrás
+                return -1; 
             } else {
                 System.out.println("Opción no válida. Por favor, seleccione una opción válida.");
             }
@@ -381,7 +381,7 @@ public class netflix {
         System.out.println("9. Suspense");
         System.out.println("10. Ciencia ficción");
         int opcionCategoria = sc.nextInt();
-        sc.nextLine(); // Limpiar el buffer
+        sc.nextLine(); 
 
         switch (opcionCategoria) {
             case 1:
