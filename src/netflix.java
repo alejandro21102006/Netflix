@@ -41,7 +41,7 @@ public class netflix {
                     apellidos = datos.nextLine();
                     System.out.println("--Ingrese su nombre de usuario--");
                     nombreUsuario = datos.nextLine();
-                    System.out.println("--INGRESE SU CORRO ELECTRÓNICO--");
+                    System.out.println("--INGRESE SU CORREO ELECTRÓNICO--");
                     correo = datos.nextLine();
                     System.out.println("--CREA TU CONTRASEÑA(la contraseña debe tener de 8 dígitos a más)--");
                     contraseña = datos.nextLine();
@@ -51,7 +51,7 @@ public class netflix {
                         String IniciarSesión = datos.nextLine();
                         if (IniciarSesión.equalsIgnoreCase("SI")){
                             System.out.println("--INICIAR SESIÓN--");
-                            System.out.println("--INGRESE SU CORRO ELECTRÓNICO--");
+                            System.out.println("--INGRESE SU CORREO ELECTRÓNICO--");
                             correo_in= datos.nextLine();
                             if (correo_in.equals(correo)){
                                 System.out.println("ingresa la contraseña que creó");
