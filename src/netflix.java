@@ -19,7 +19,6 @@ public class netflix {
         System.out.println("----ELIJA UNA OPCIÓN----");
         System.out.println("1. Registrarse");
         System.out.println("2. Iniciar sesión");
-        System.out.println("3. Guardar y salir");
         System.out.print("Selecciona una opción: ");
         int opcion = datos.nextInt();
         datos.nextLine();
@@ -109,17 +108,13 @@ public class netflix {
                 System.out.println("BIENVENIDO(●'◡'●)(●'◡'●)");
                 System.out.println("");
                 break;
-            case 3:
-                System.out.println("Guardar y salir");
-                this.fDatosClientea();
-                break;
 
             default:
                 System.out.println("Opción inválida.");
                 this.fDatosClientea();
 
         }
-        if (opcion < 3) {
+        if (opcion < 2) {
             double precio;
             do {
                 precio = this.planesdenetflix();
