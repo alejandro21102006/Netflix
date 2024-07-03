@@ -110,7 +110,7 @@ public class netflix {
                 break;
 
             default:
-                System.out.println("Opción inválida.");
+                System.out.println("Opción inválida (vuelve a elegir)");
                 this.fDatosClientea();
 
         }
