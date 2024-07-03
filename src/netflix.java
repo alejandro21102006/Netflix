@@ -345,8 +345,7 @@ public class netflix {
                 "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
                 "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n" +
                 "⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉");
-        System.out.println("-----Elija una opción-----");
-        System.out.println("Categoría");
+        System.out.println("-----¿Elija una categoria?-----");
         System.out.println("1. Anime");
         System.out.println("2. Terror");
         System.out.println("3. Comedia");
