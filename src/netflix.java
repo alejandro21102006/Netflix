@@ -51,7 +51,7 @@ public class netflix {
                         String IniciarSesión = datos.nextLine();
                         if (IniciarSesión.equalsIgnoreCase("SI")){
                             System.out.println("--INICIAR SESIÓN--");
-                            System.out.println("Ingrese su correo electrónico que creó");
+                            System.out.println("--INGRESE SU CORRO ELECTRÓNICO--");
                             correo_in= datos.nextLine();
                             if (correo_in.equals(correo)){
                                 System.out.println("ingresa la contraseña que creó");
