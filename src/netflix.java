@@ -185,7 +185,7 @@ public class netflix {
         System.out.println("El metodo de pago es por tarjeta de debito o credito");
         System.out.println("A continuacion ingrese los datos solicitados para completar el pago de su membresia");
         String[] datosTarjeta = new String[6];
-        String[] nombresCamposrequeridos = {" nombre del propietario"," apellido del propietario ","numero de DNI","numero de la tarjeta","fecha de caducidad mm/yyyy", "CVV"};
+        String[] nombresCamposrequeridos = {" nombre del propietario"," apellido del propietario ","numero de DNI","numero de la tarjeta","fecha de caducidad (mm/yyyy)", "CVV"};
         for (int i=0; i<datosTarjeta.length; i++){
             System.out.println("Ingrese  "+ nombresCamposrequeridos[i]);
             if (i == 3) {
