@@ -41,7 +41,7 @@ public class netflix {
                     apellidos = datos.nextLine();
                     System.out.println("--Ingrese su nombre de usuario--");
                     nombreUsuario = datos.nextLine();
-                    System.out.println("--CREA SU CORREO ELECTRÓNICO--");
+                    System.out.println("--INGRESE SU CORRO ELECTRÓNICO--");
                     correo = datos.nextLine();
                     System.out.println("--CREA TU CONTRASEÑA(la contraseña debe tener de 8 dígitos a más)--");
                     contraseña = datos.nextLine();
