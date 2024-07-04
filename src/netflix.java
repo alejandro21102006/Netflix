@@ -10,7 +10,9 @@ public class netflix {
     private String[] contraseñasdeinciarsecion = new String[10];
     private int Registrarsedeinciarsecion = 0;
     private int Iniciarsesión = 0;
-    
+
+
+
     private String[] nombresPerfiles = new String[10];
     private String[] contraseñasPerfiles = new String[10];
     private int[] tiposCuentas = new int[10];
@@ -24,7 +26,7 @@ public class netflix {
                 "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
                 "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
                 "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n");
-        System.out.println("------NETFLIX-------");
+        System.out.println("------NETFLIX--------");
         System.out.println("----ELIJA UNA OPCIÓN----");
         System.out.println("1. Registrarse");
         System.out.println("2. Iniciar sesión");
@@ -192,14 +194,23 @@ public class netflix {
     }
 
     public String Pago() {
-        Scanner xd= new Scanner(System.in);
+        Scanner xd = new Scanner(System.in);
         System.out.println("El metodo de pago es por tarjeta de debito o credito");
         System.out.println("A continuacion ingrese los datos solicitados para completar el pago de su membresia");
         String[] datosTarjeta = new String[6];
-        String[] nombresCamposrequeridos = {" nombre del propietario"," apellido del propietario ","numero de DNI","numero de la tarjeta","fecha de caducidad (mm/yyyy)", "CVV"};
-        for (int i=0; i<datosTarjeta.length; i++){
-            System.out.println("Ingrese  "+ nombresCamposrequeridos[i]);
-            if (i == 3) {
+        String[] nombresCamposrequeridos = {"nombre del propietario", "apellido del propietario", "numero de DNI", "numero de la tarjeta", "fecha de caducidad (mm/yyyy)", "CVV"};
+
+        for (int i = 0; i < datosTarjeta.length; i++) {
+            System.out.println("Ingrese " + nombresCamposrequeridos[i]);
+
+            if (i == 2) {
+                do {
+                    datosTarjeta[i] = xd.nextLine();
+                    if (datosTarjeta[i].length() != 8) {
+                        System.out.println("Por favor, ingrese un número de DNI válido de 8 dígitos.");
+                    }
+                } while (datosTarjeta[i].length() != 8);
+            } else if (i == 3) {
                 do {
                     datosTarjeta[i] = xd.nextLine();
                     if (datosTarjeta[i].length() != 16) {
