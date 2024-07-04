@@ -138,7 +138,7 @@ public class netflix {
                 precio = this.planesdenetflix();
                 if (precio == -1) {
                     System.out.println("Volviendo al menú principal...");
-                    return this.fDatosClientea(); // Vuelve a mostrar el menú principal
+                    return this.fDatosClientea(); 
                 }
             } while (precio == -1);
 
@@ -177,14 +177,14 @@ public class netflix {
                 precioSeleccionado = precios[opcion - 1];
                 System.out.println("Ha seleccionado el " + planes[opcion - 1] + ".");
                 System.out.println("El total a pagar es: $" + precioSeleccionado);
-                System.out.println("¿Desea confirmar esta selección? (S/N)");
+                System.out.println("¿Desea confirmar esta selección? (Si/No)");
                 String confirmacion = plqn.nextLine();
                 if (confirmacion.equalsIgnoreCase("S")) {
                     seleccionFinal = true;
                 }
             } else if (opcion == 0) {
                 System.out.println("Volviendo al menú anterior...");
-                return -1; // Indicador para volver atrás
+                return -1; 
             } else {
                 System.out.println("Opción no válida. Por favor, seleccione una opción válida.");
             }
