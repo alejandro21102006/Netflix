@@ -138,7 +138,7 @@ public class netflix {
                 precio = this.planesdenetflix();
                 if (precio == -1) {
                     System.out.println("Volviendo al menú principal...");
-                    return this.fDatosClientea(); 
+                    return this.fDatosClientea();
                 }
             } while (precio == -1);
 
@@ -179,7 +179,7 @@ public class netflix {
                 System.out.println("El total a pagar es: $" + precioSeleccionado);
                 System.out.println("¿Desea confirmar esta selección? (SI/NO)");
                 String confirmacion = plqn.nextLine();
-                if (confirmacion.equalsIgnoreCase("S")) {
+                if (confirmacion.equalsIgnoreCase("Si")) {
                     seleccionFinal = true;
                 }
             } else if (opcion == 0) {
