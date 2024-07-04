@@ -2,6 +2,15 @@ import java.util.Scanner;
 public class netflix {
     private String nombre,apellidos,nombreUsuario,correo,correo_in,contraseña,contraseña_in;
     private int opcion;
+
+    private String[] nombresdeinciarsecion = new String[10];
+    private String[] aplellidodeinciarsecion = new String[10];
+    private String[] nombreUsuariodeinciarsecion = new String[10];
+    private String[] correodeinciarsecion = new String[10];
+    private String[] contraseñasdeinciarsecion = new String[10];
+    private int Registrarsedeinciarsecion = 0;
+    private int Iniciarsesión = 0;
+    
     private String[] nombresPerfiles = new String[10];
     private String[] contraseñasPerfiles = new String[10];
     private int[] tiposCuentas = new int[10];
@@ -15,7 +24,7 @@ public class netflix {
                 "⣿⣷⡀⣿⠀⣸⣇⣀⡀⠀⠀⣿⠀⠀⢸⣇⣀⡀⠀⣿⠀⠀⠀⣿⡇⠀⠹⣷⡿⠁\n" +
                 "⣿⡿⣷⣿⠀⣿⡟⠛⠁⠀⠀⣿⠀⠀⢸⡏⠉⠁⠀⣿⠀⠀⠀⣿⡇⠀⢠⣿⣇⠀\n" +
                 "⣿⡇⢻⣿⠀⣿⣷⣶⡆⠀⠀⠿⠀⠀⠸⠇⠀⠀⠀⣿⣶⣶⠀⣿⡇⢀⣿⠋⢿⡆\n");
-        System.out.println("------NETFLIX------");
+        System.out.println("------NETFLIX--------");
         System.out.println("----ELIJA UNA OPCIÓN----");
         System.out.println("1. Registrarse");
         System.out.println("2. Iniciar sesión");
@@ -36,14 +45,19 @@ public class netflix {
                 if (registrase.equalsIgnoreCase("SI")){
                     System.out.println("_INGRESE SU NOMBRE_");
                     nombre = datos.nextLine();
+                    nombresdeinciarsecion[Registrarsedeinciarsecion]= nombre;
                     System.out.println("-INGRESE APELLIDOS-");
                     apellidos = datos.nextLine();
+                    aplellidodeinciarsecion[Registrarsedeinciarsecion]=apellidos;
                     System.out.println("--Ingrese su nombre de usuario--");
                     nombreUsuario = datos.nextLine();
+                    nombreUsuariodeinciarsecion[Registrarsedeinciarsecion]=nombreUsuario;
                     System.out.println("--INGRESE SU CORREO ELECTRÓNICO--");
                     correo = datos.nextLine();
+                    correodeinciarsecion[Registrarsedeinciarsecion]=correo;
                     System.out.println("--CREA TU CONTRASEÑA(la contraseña debe tener de 8 dígitos a más)--");
                     contraseña = datos.nextLine();
+                    contraseñasdeinciarsecion[Registrarsedeinciarsecion]=contraseña;
 
                     if (contraseña.length()>=8){
                         System.out.println("--¿DESEA INICIAR SESIÓN?___(SI/NO)");
@@ -102,7 +116,9 @@ public class netflix {
                 System.out.println("--Iniciar Sesión--");
                 System.out.println("Ingrese su correo electrónico:");
                 correo_in= datos.nextLine();
+                correodeinciarsecion[Iniciarsesión]=correo;
                 System.out.println("Ingrese su contraseña:");
+                contraseñasdeinciarsecion[Iniciarsesión]=contraseña;
                 contraseña_in = datos.nextLine();
                 System.out.println("");
                 System.out.println("BIENVENIDO(●'◡'●)(●'◡'●)");
@@ -110,7 +126,7 @@ public class netflix {
                 break;
 
             default:
-                System.out.println("Opción inválida (vuelve a elegir)");
+                System.out.println("Opción inválida.");
                 this.fDatosClientea();
 
         }
@@ -120,7 +136,7 @@ public class netflix {
                 precio = this.planesdenetflix();
                 if (precio == -1) {
                     System.out.println("Volviendo al menú principal...");
-                    return this.fDatosClientea(); 
+                    return this.fDatosClientea(); // Vuelve a mostrar el menú principal
                 }
             } while (precio == -1);
 
@@ -166,7 +182,7 @@ public class netflix {
                 }
             } else if (opcion == 0) {
                 System.out.println("Volviendo al menú anterior...");
-                return -1; 
+                return -1; // Indicador para volver atrás
             } else {
                 System.out.println("Opción no válida. Por favor, seleccione una opción válida.");
             }
@@ -381,7 +397,7 @@ public class netflix {
         System.out.println("9. Suspense");
         System.out.println("10. Ciencia ficción");
         int opcionCategoria = sc.nextInt();
-        sc.nextLine(); 
+        sc.nextLine(); // Limpiar el buffer
 
         switch (opcionCategoria) {
             case 1:
