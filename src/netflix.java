@@ -138,7 +138,7 @@ public class netflix {
                 precio = this.planesdenetflix();
                 if (precio == -1) {
                     System.out.println("Volviendo al menú principal...");
-                    return this.fDatosClientea(); // Vuelve a mostrar el menú principal
+                    return this.fDatosClientea(); 
                 }
             } while (precio == -1);
 
@@ -236,8 +236,12 @@ public class netflix {
             }
         }
 
+        System.out.println("...procesando..");
         System.out.println("...procesando...");
-        System.out.println("...procesando...");
+        System.out.println("...procesando....");
+        System.out.println("...procesando....");
+        System.out.println("...procesando.....");
+        System.out.println("...procesando..");
         System.out.println("Su pago fue procesado correctamente!");
         System.out.println("Ya puede disfrutar del amplio catalogo de Netflix");
         return null;
